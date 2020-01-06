@@ -1,8 +1,9 @@
 # DRL-banana-agent
+
 Udacity "Navigation" project solved with DQN
 ![agent performance visualisation](fin_banana.gif)
 
-### Introduction
+### Introduction  
 
 For this project, an agent was trained to navigate (and collect bananas) in a large, square world.
 
@@ -16,19 +17,20 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
-### Dependencies (OS: Ubuntu 18.04)
-Install Anaconda - https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
-Type in terminal:
-	conda create --name drlnd python=3.6
-	source activate drlnd
-	git clone https://github.com/openai/gym.git
-	cd gym
-	pip install -e .
-	cd ..
-	git clone https://github.com/udacity/deep-reinforcement-learning.git
-	cd deep-reinforcement-learning/python
-	pip install .
-	python -m ipykernel install --user --name drlnd --display-name "drlnd"
+### Dependencies (OS: Ubuntu 18.04)  
+
+Install Anaconda - https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html  
+Type in terminal:  
+	conda create --name drlnd python=3.6  
+	source activate drlnd  
+	git clone https://github.com/openai/gym.git  
+	cd gym  
+	pip install -e .  
+	cd ..  
+	git clone https://github.com/udacity/deep-reinforcement-learning.git  
+	cd deep-reinforcement-learning/python  
+	pip install .  
+	python -m ipykernel install --user --name drlnd --display-name "drlnd"  
 
 Clone the repository, in conda 'drlnd' environment start jupyter notebook by typing in terminal 'jupyter-notebook', switch kernel on 'drlnd'.
 
@@ -36,6 +38,6 @@ Clone the repository, in conda 'drlnd' environment start jupyter notebook by typ
 Download built environment - https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip 
 
 ### Training the agent
-To train the agent use Navigation.ipynb file
-Type in terminal:
-	jupyter-notebook Navigation.ipnyb
+To train the agent use Navigation.ipynb file  
+Type in terminal:  
+	jupyter-notebook Navigation.ipnyb  

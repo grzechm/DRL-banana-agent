@@ -1,36 +1,42 @@
 #Report
+
 To solve the presented problem a deep Q-network (DQN) has been chosen. The approach combines reinforcement learning with a class of artificial neural network. The network consist of several layers of nodes which makes it possible for artificial neural network to learn progressively more abstract representations of the raw sensory data.
 The role of the agent is to learn through interactions wit the environment. The goal is to select actions that maximizes cumulative future reward. Deep convolutional neural network is used as an approximator of action-value function denoted as: <Q*(s,a)>, where rt - rewards, gamma - discount factor, t -time step, s - state, a - action.
 Using nonlinear function approximator to represesent the action-value function makes learning process unstable or even diverging. To address both of those issues two key ideas have been introduced. First, mechanism termed as experience replay that randomizes over data. The process removes correlations in the sequence of observations and smooths changes in the data distribution. Second, an itertive update has been used to adjust action-values towards target values. The update is periodicall, therefore the correlactions with the target are reduced.
 
 ###Model architecture
+
 The input to the neural network consist of 37 values. There are 64 nodes for each first and second hidden layer. The final output layer provides 4 values for each valid action. All nodes are followed by a rectified linear unit (ReLU). The network consists only of fully connected layers.
+
 ###Hyperparameters
-dqn_agent.py file:
-BUFFER_SIZE = 1e5  - size of the replay buffer
-BATCH_SIZE = 64  - number of samples used during learning step
-TAU = 1e-3  - local parameters to target update factor
-LR - 5e-4 - learning rate
-UPDATE_EVERY = 4 - how often to update the network
 
-Navigation.ipnyb file:
-max_t = 1000  - maksimum number of agent's steps before an episode finishes
-eps_start = 1.0  - initial value of the epsilon paramater
-eps_end = 0.01  - minimal value of the epsilon parameter
-eps_deay = 0.995  - decay rate of the epsilon paramter
+dqn_agent.py file:  
+BUFFER_SIZE = 1e5  - size of the replay buffer  
+BATCH_SIZE = 64  - number of samples used during learning step  
+TAU = 1e-3  - local parameters to target update factor  
+LR - 5e-4 - learning rate  
+UPDATE_EVERY = 4 - how often to update the network  
 
-###Plot of rewards
-The environment has been solved (mean score over 100 episodes was higher than 13) in less than 500 episodes.
-![mean score](final_plot_no_PER.png)
+Navigation.ipnyb file:  
+max_t = 1000  - maksimum number of agent's steps before an episode finishes  
+eps_start = 1.0  - initial value of the epsilon paramater  
+eps_end = 0.01  - minimal value of the epsilon parameter  
+eps_deay = 0.995  - decay rate of the epsilon paramter  
 
-Weights and model are stored in file 'model_weigths.pth'
+###Plot of rewards 
+
+The environment has been solved (mean score over 100 episodes was higher than 13) in less than 500 episodes.  
+![mean score](final_plot_no_PER.png)  
+
+Weights and model are stored in file 'model_weigths.pth'  
 
 ###Future improvement
-Prioritized Experience Replay (PER):
-Deep Q-Learning samples experience transitions uniformly from a replay memory. Prioritized experienced replay is based on the idea that the agent can learn more effectively from some transitions than from others, and the more important transitions should be sampled with higher probability. 
 
-Double Deep Q-Network (DDQN):
-Deep Q-Learning tends to overestimate action values. Double Q-Learning has been shown to work well in practice to help with this.
+Prioritized Experience Replay (PER):  
+Deep Q-Learning samples experience transitions uniformly from a replay memory. Prioritized experienced replay is based on the idea that the agent can learn more effectively from some transitions than from others, and the more important transitions should be sampled with higher probability.   
 
-Dueling DQN:
-Currently, in order to determine which states are (or are not) valuable, we have to estimate the corresponding action values for each action. However, by replacing the traditional Deep Q-Network (DQN) architecture with a dueling architecture, we can assess the value of each state, without having to learn the effect of each action.
+Double Deep Q-Network (DDQN):  
+Deep Q-Learning tends to overestimate action values. Double Q-Learning has been shown to work well in practice to help with this.  
+
+Dueling DQN:  
+Currently, in order to determine which states are (or are not) valuable, we have to estimate the corresponding action values for each action. However, by replacing the traditional Deep Q-Network (DQN) architecture with a dueling architecture, we can assess the value of each state, without having to learn the effect of each action.  
