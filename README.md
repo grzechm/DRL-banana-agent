@@ -34,7 +34,7 @@ Type in terminal:
 	pip install .  
 	python -m ipykernel install --user --name drlnd --display-name "drlnd"  
 
-Clone the repository, in conda 'drlnd' environment start jupyter notebook by typing in terminal 'jupyter-notebook', switch kernel on 'drlnd'.
+Clone the repository, in conda 'drlnd' environment start jupyter notebook by typing in terminal 'jupyter-notebook', switch kernel to 'drlnd'.
 
 
 Download built environment - https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip 
