@@ -20,17 +20,7 @@ The task is episodic, and in order to solve the environment, your agent must get
 ### Dependencies (OS: Ubuntu 18.04)  
 
 Install Anaconda - https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html  
-Type in terminal:  
-	conda create --name drlnd python=3.6  
-	source activate drlnd  
-	git clone https://github.com/openai/gym.git  
-	cd gym  
-	pip install -e .  
-	cd ..  
-	git clone https://github.com/udacity/deep-reinforcement-learning.git  
-	cd deep-reinforcement-learning/python  
-	pip install .  
-	python -m ipykernel install --user --name drlnd --display-name "drlnd"  
+Run install.sh file to add required components.
 
 Clone the repository, in conda 'drlnd' environment start jupyter notebook by typing in terminal 'jupyter-notebook', switch kernel on 'drlnd'.
 
