@@ -15,14 +15,16 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 - **`2`** - turn left.
 - **`3`** - turn right.
 
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
+The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.  
+
+[source: udacity/nanodegrees/deep-reinforcement-learning]
 
 ### Dependencies (OS: Ubuntu 18.04)  
 
 Install Anaconda - https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html  
 Run install.sh file to add required components.
 
-Clone the repository, in conda 'drlnd' environment start jupyter notebook by typing in terminal 'jupyter-notebook', switch kernel on 'drlnd'.
+Clone the repository, in conda 'drlnd' environment start jupyter notebook by typing in terminal 'jupyter-notebook', switch kernel to 'drlnd'.
 
 
 Download built environment - https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip 
